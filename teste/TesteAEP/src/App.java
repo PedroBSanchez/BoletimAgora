@@ -6,9 +6,6 @@ public class App {
         objetoDeTeste.testaCadastrarAlunoValido();
         System.out.println("\n");
         objetoDeTeste.testaCadastrarAlunoInvalido();
-
-
-
-
+        
     }
 }
