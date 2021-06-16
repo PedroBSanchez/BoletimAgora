@@ -1,5 +1,6 @@
 create table escolas (
     id_escola int not null auto_increment,
+    nome char(60),
     num_alunos int,
     cep char(12),
     cidade char(60),

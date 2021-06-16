@@ -1,7 +1,6 @@
-insert into escola (num_alunos, cep, cidade, bairro, logradouro, numero) values (1500, "1234", "Maringa", "zona 7", "Rua sogra desce", 60);
+insert into escolas (nome, num_alunos, cep, cidade, bairro, logradouro, numero) values ("Escola São José", 1500, "1234", "Maringa", "zona 7", "Rua sogra desce", 60);
 
-
-insert into escola (num_alunos, cep, cidade, bairro, logradouro, numero) values (1600, "4321", "Maringa", "zona 7", "Rua sogra desce2", 30);
+insert into escolas (nome, num_alunos, cep, cidade, bairro, logradouro, numero) values ("Escola Avelar", 1600, "4321", "Maringa", "zona 7", "Rua sogra desce2", 30);
 
 insert into alunos (id_escola, nome, num_matricula, idade) values (1, "Leonardo", 12345, 15);
 

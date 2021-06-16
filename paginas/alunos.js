@@ -1,11 +1,42 @@
-function main(){
+function fazGet(url){
+    let request = new XMLHttpRequest()
+    request.open("GET", url, false)
+    request.send()
+    return request.responseText
+}
 
-    let nome = 'teste';
-    let numMatricula = '111';
+function chamaGet(){
+    var url = "http://localhost:3000/alunos/";
+    var idAluno = document.getElementById("alunoId").value;
+    url = url + idAluno;
     
+    var dados = fazGet(url);
+    var dadosObjeto = JSON.parse(dados);
+    return dadosObjeto;
+}
+
+
+
+function inserirDadosNoHTML(){
+
+    var data = chamaGet();
+
+    var nome = data.escolas[0].nome;
+    var id = data.escolas[0].id_aluno;
+
+    criaCard(nome, id);
     
-    
-    let place = document.getElementById('alunos');
+}
+
+
+function teste() {
+    window.location.replace("file:///C:/Users/Pedro/Documents/BoletimAgora/paginas/cadastrarAluno.html");
+    console.log("123");
+}
+
+function criaCard(nome, numMatricula) {
+
+    let place = document.getElementById('alunosCadastrados');
 
     //Cria cards de cada aluno
 
@@ -72,10 +103,3 @@ function main(){
     divCard.appendChild(divCardHeader);
     divCard.appendChild(divCardBody);
 }
-
-function teste(id) {
-
-    console.log(id);
-}
-
-
