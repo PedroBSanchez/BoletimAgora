@@ -5,6 +5,8 @@ const bodyParser = require('body-parser');
 
 //Chamar Rotas
 const rotaEscolas = require('./routes/escolas.js');
+const rotaAlunos = require('./routes/alunos.js');
+const rotaNotas = require('./routes/notas.js');
 
 //Configurações e melhorias
 app.use(morgan('dev'));
@@ -13,6 +15,8 @@ app.use(bodyParser.json()); //json de entrada no body
 
 //Rotas
 app.use('/escolas', rotaEscolas);
+app.use('/alunos', rotaAlunos);
+app.use('/notas', rotaNotas);
 
 //Quando não encontra rota entra aqui
 app.use((req, res, next)=>{
