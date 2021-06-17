@@ -24,9 +24,6 @@
                     <a class="nav-link active" href="./alunos.html">Alunos</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="./cadastrarAluno.html">Cadastrar Aluno</a>
-                    </li>
-                    <li class="nav-item">
                     <a class="nav-link" href="./escolas.html">Escolas</a>
                     </li>
                 </ul>
@@ -40,30 +37,22 @@
                 <h3>Alunos</h3>
             </div>
         </div>
-        <hr>
-
-        <div class="container-fluid d-flex flex-wrap" id="alunosCadastrados">
-            <div class="col-sm-4">
-                <div class="card text-white bg-primary mb-3 item-align-left" style="max-width: 18rem;">
-                    <div class="card-header">
-                        <h5 id="nome1"></h5>
-                    </div>
-                    <div class="card-body">
-                        <h6 class="card-title">Número de matrícula:</h6>
-                        <p class="card-text">1812415</p>
-                        <div class="text-center">
-                            <button type="button" class="btn btn-outline-light btn-sm">Visualizar</button>
-                        </div>
-                    </div>
-                </div>
+        <div class="row pt-2">
+            <div class="col-4">
+                <input class="form-control ds-input" id="alunosId" type="number" placeholder="Pesquisa">
             </div>
+            <div class="col-4">
+                <button class="btn btn-primary" onclick="inserirDadosNoHTML()">Pesquisar</button>
+            </div>
+        </div>
+
+        <hr>
+        <div class="container-fluid d-flex flex-wrap" id="alunosCadastrados">
+           
 
 
         </div>
             
-        
-
-
     </div>
 
     <script src="./alunos.js"></script>
